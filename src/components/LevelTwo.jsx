@@ -4,6 +4,7 @@ import { motion } from 'motion/react'
 import SuccessModal from './SuccessModal.jsx'
 import WrongModal from './WrongModal.jsx'
 import CompletionModal from './CompletionModal.jsx'
+import { Brain } from 'lucide-react'
 
 const LevelTwo = () => {
 const [currentQuestionIndex,setCurrentQuestionIndex] = useState(0)
@@ -25,6 +26,8 @@ const [currentQuestionIndex,setCurrentQuestionIndex] = useState(0)
         if(userInput === answer){
        
             setSuccessModal(true)
+            setSelected(false)
+
             setScore(score + 1)
             setCurrentQuestionIndex(currentQuestionIndex + 1)
         }else if (userInput !== answer){
@@ -44,6 +47,12 @@ const [currentQuestionIndex,setCurrentQuestionIndex] = useState(0)
     <>
     <div className='h-screen bg-[#3c6d79]'>
     <div className='grid grid-cols-1'>
+    <div className="top m-2 flex gap-3">
+                <Brain className='cursor-pointer' width={30} height={30} color='#f9ae65'/>
+                <div className='hero-1'>
+                    <h1 className='text-2xl font-semibold bebas-neue tracking-wide cursor-pointer text-[#f9ae65]'>HelloQuiz</h1>
+                </div>
+            </div>
         <div className='flex justify-center items-center text-7xl text-[#f9ae65] bebas-neue'>
             Quiz Panel
         </div>
@@ -105,7 +114,7 @@ const [currentQuestionIndex,setCurrentQuestionIndex] = useState(0)
                                     setSelected(!selected)
                                     return selected ? "bg-[#E0E2EE]" : "bg-[#f9ae65]"
                                 })}
-                                key={index} className={`flex justify-center bebas-neue text-3xl mt-5 border border-[#f9ae65] p-5 rounded-md text-[#f9ae65] `}>
+                                key={index} className={`flex justify-center bebas-neue text-3xl mt-5 border border-[#f9ae65] p-5 rounded-md  ${selected && userInput === item ? "bg-[#f9ae65] text-[#E0E2EE]" : "text-[#f9ae65]"}`}>
                                     {item}
                                 </motion.button>
                             )
