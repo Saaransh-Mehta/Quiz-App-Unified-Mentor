@@ -91,10 +91,10 @@ const [currentQuestionIndex,setCurrentQuestionIndex] = useState(0)
                 )
             }
             <div className='h-[400px] w-[700px] border border-[#f9ae65]'>
-                <div className='flex justify-center gap-5'>
+                <div className='flex justify-between gap-5'>
                     <h1></h1>
-                <h1 className=' text-2xl mt-1 text-[#E0E2EE] bebas-neue '>{`Question number ${currentQuestionIndex + 1}`}</h1>
-                <h1 className='text-2xl bebas-neue mt-1 text-[#E0E2EE]'>{`Score: ${score}`}</h1>
+                <h1 className=' text-2xl mt-1 text-[#E0E2EE] bebas-neue ml-[7.5rem] '>{`Question number: ${currentQuestionIndex + 1}`}</h1>
+                <h1 className='text-2xl bebas-neue mt-1 text-[#E0E2EE] mr-3'>{`Score: ${score}`}</h1>
                 </div>
                 
             <div className='question mt-4 flex justify-center text-3xl text-[#f9ae65] bebas-neue tracking-wide'>

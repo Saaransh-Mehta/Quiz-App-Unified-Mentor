@@ -5,6 +5,7 @@ import Level from './components/Level'
 import QuizPanel from './components/QuizPanel'
 import LevelTwo from './components/LevelTwo'
 import LevelThree from './components/LevelThree'
+import Footer from './components/Footer'
 
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
     <Route path='/quiz/level3' element={<LevelThree/>} />
     
    </Routes>
+   <Footer/>
     </>
   )
 }
