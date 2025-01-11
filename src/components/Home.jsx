@@ -6,6 +6,7 @@ import OverlappingBalls from './AnimatedOrange'
 import { useNavigate } from 'react-router-dom'
 import QuizPanel from './QuizPanel'
 import Hero from './Hero'
+import ContactForm from './Contact'
 const Home = () => {
     const navigate = useNavigate()
     const handleNavigate = ()=>{
@@ -71,6 +72,7 @@ const Home = () => {
     </div>
     
     <Hero/>
+   <ContactForm/>
     </>
   )
 }
